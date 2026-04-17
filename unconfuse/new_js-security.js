@@ -5391,7 +5391,8 @@ var ParamsSign = function () {
               _$ic = _$iu.sigBytes,
               _$iO = this._map1;
             _$iu.clamp();
-            for (var _$ii = [], _$iE = 0; _$iE < _$ic; _$iE += 3) for (var _$im = (_$iD.eaRUc(_$iM[_$iE >>> 2], 24 - _$iD.khmBS(_$iE, 4) * 8) & 255) << 16 | _$iD.OnQSJ(_$iM[_$iD.AgyXy(_$iE, 1) >>> 2] >>> 24 - (_$iE + 1) % 4 * 8, 255) << 8 | _$iM[_$iE + 2 >>> 2] >>> 24 - _$iD.vYwuY(_$iE + 2, 4) * 8 & 255, _$iN = 0; _$iN < 4 && _$iE + _$iD.SSkRM(0.75, _$iN) < _$ic; _$iN++) _$ii.push(_$iO.charAt(_$iD.xivEr(_$im, 6 * _$iD.BpBSd(3, _$iN)) & 63));
+            for (var _$ii = [], _$iE = 0; _$iE < _$ic; _$iE += 3)
+                for (var _$im = (_$iD.eaRUc(_$iM[_$iE >>> 2], 24 - _$iD.khmBS(_$iE, 4) * 8) & 255) << 16 | _$iD.OnQSJ(_$iM[_$iD.AgyXy(_$iE, 1) >>> 2] >>> 24 - (_$iE + 1) % 4 * 8, 255) << 8 | _$iM[_$iE + 2 >>> 2] >>> 24 - _$iD.vYwuY(_$iE + 2, 4) * 8 & 255, _$iN = 0; _$iN < 4 && _$iE + _$iD.SSkRM(0.75, _$iN) < _$ic; _$iN++) _$ii.push(_$iO.charAt(_$iD.xivEr(_$im, 6 * _$iD.BpBSd(3, _$iN)) & 63));
             return _$ii.join('');
           },
           'parse': function (_$iu) {
