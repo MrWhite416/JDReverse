@@ -33,5 +33,17 @@
 
 第9部分：
 
+    码表1：QPONMLKJIHGFEDCBA-_9876543210zyxwvutsrqponmlkjihgfedcbaZYXWVUTSR
+    码表2（来自参数）：tk03w92e91b3818nS6s04951uWnZvA3Zw0y6bx0lhtT7U6yXEWax4vqsX3gS8n-imlKsoh4lrU1e33XwGfQ-UD3505Z2pnpynypeen17bie12026042217484026459f06cc0GrYEOETIneP
+
+706 9 0 10
+
+    49  码表2对应索引（9）的ascii码
+    755  706 + 49
+    10   0 + 10
+    98   码表2对应索引（10）的ascii码
+    853    755 + 98
+    11942   853 * 14
+    q      11942 % 64 取出码表对应的字符
 
 

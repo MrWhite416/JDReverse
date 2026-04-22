@@ -8447,7 +8447,8 @@ var ParamsSign = function () {
       'code': 0xc8,
       'message': ''
     });
-  }, _$iQ.prototype._$gdk = function (_$ir, _$ix, _$iX, _$iT) {
+  },
+      _$iQ.prototype._$gdk = function (_$ir, _$ix, _$iX, _$iT) {
     'use strict';
 
     var x = _3nkbm;
@@ -8792,11 +8793,13 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$atm = function (_$ir, _$ix, _$iX) {
+  },
+      _$iQ.prototype._$atm = function (_$ir, _$ix, _$iX) {
     var mf = iw,
       _$iT = this._defaultAlgorithm[_$ir];
     return _$b.jTBXS(mf(0x296), _$ir) ? _$iT(_$ix, _$iX).toString(_$O4) : _$iT(_$ix).toString(_$O4);
-  }, _$iQ.prototype._$pam = function (_$ir, _$ix) {
+  },
+      _$iQ.prototype._$pam = function (_$ir, _$ix) {
     'use strict';
 
     var g = _3nkbm;
@@ -8914,7 +8917,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$gsp = function (_$ir, _$ix, _$iX, _$iT, _$iD, _$iL) {
+  },
+      _$iQ.prototype._$gsp = function (_$ir, _$ix, _$iX, _$iT, _$iD, _$iL) {
     'use strict';
 
     var o = _3nkbm;
@@ -8992,7 +8996,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$gs = function (_$ir, _$ix) {
+  },
+      _$iQ.prototype._$gs = function (_$ir, _$ix) {
     'use strict';
 
     var m = _3nkbm;
@@ -9129,7 +9134,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$gsd = function (_$ir, _$ix) {
+  },
+      _$iQ.prototype._$gsd = function (_$ir, _$ix) {
     'use strict';
 
     var y = _3nkbm;
@@ -9242,7 +9248,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$rds = function () {
+  },
+      _$iQ.prototype._$rds = function () {
     var mw = iw,
       _$ir,
       _$ix,
@@ -9258,7 +9265,8 @@ var ParamsSign = function () {
         _$OQ(_$iX._debug, ml(0x2a5).concat(_$iV));
       });
     }, 0), _$OQ(this._debug, _$b.lgSOS));
-  }, _$iQ.prototype._$rgo = function () {
+  },
+      _$iQ.prototype._$rgo = function () {
     var N0 = iw,
       _$ir,
       _$ix,
@@ -9274,7 +9282,8 @@ var ParamsSign = function () {
         _$OQ(_$iX._debug, _$Ui(_$iH = N1(0x294).concat(_$iD, N1(0x2a7))).call(_$iH, _$iV, N1(0x17b))), delete _$iT[_$iD], _$iW();
       });
     })), _$iT[_$iD];
-  }, _$iQ.prototype._$ram = function () {
+  },
+      _$iQ.prototype._$ram = function () {
     var N2 = iw,
       _$ir = {
         'xKqYH': N2(0x24a),
@@ -9386,7 +9395,8 @@ var ParamsSign = function () {
         'algo': _$iM
       }), _$ir.JHTrI(_$OQ, _$ix._debug, _$Ui(_$iW = _$Ui(_$iV = _$Ui(_$iH = _$ir.RcWdV(_$Ui, _$iu = N5(0x1e7).concat(_$iE, N5(0x168))).call(_$iu, _$iN, N5(0x16d))).call(_$iH, _$ic, N5(0x18d))).call(_$iV, _$im, N5(0x1ce))).call(_$iW, _$iO));
     });
-  }, _$iQ.prototype._$cps = function (_$ir) {
+  },
+      _$iQ.prototype._$cps = function (_$ir) {
     var N6 = iw,
       _$ix = {
         'QfFrG': function (_$iH, _$iu) {
@@ -9433,7 +9443,8 @@ var ParamsSign = function () {
       'code': _$OO,
       'message': N6(0x156)
     }), null) : _$iL;
-  }, _$iQ.prototype._$ms = function (_$ir, _$ix) {
+  },
+      _$iQ.prototype._$ms = function (_$ir, _$ix) {
     'use strict';
 
     var x = _3nkbm;
@@ -9682,7 +9693,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$clt = function () {
+  },
+      _$iQ.prototype._$clt = function () {
     'use strict';
 
     var x = _3nkbm;
@@ -9832,7 +9844,8 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype._$sdnmd = function (_$ir) {
+  },
+      _$iQ.prototype._$sdnmd = function (_$ir) {
     'use strict';
 
     var i = _3nkbm;
@@ -9959,9 +9972,11 @@ var ParamsSign = function () {
           break;
       }
     }
-  }, _$iQ.prototype.sign = function (_$ir) {
+  },
+      _$iQ.prototype.sign = function (_$ir) {
     return _$WK.resolve(this.signSync(_$ir));
-  }, _$iQ.prototype.signSync = function (_$ir) {
+  },
+      _$iQ.prototype.signSync = function (_$ir) {
     var NF = iw;
     try {
       return this._$sdnmd(_$ir);
@@ -9971,7 +9986,10 @@ var ParamsSign = function () {
         'message': NF(0x297)
       }), _$ir;
     }
-  }, _$iQ.settings = {
+  },
+      _$iQ.settings = {
     'beta': !1
-  }, window.ParamsSign = _$iQ, _$iQ;
+  },
+      window.ParamsSign = _$iQ,
+      _$iQ;
 }();
