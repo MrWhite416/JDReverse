@@ -463,8 +463,9 @@ function _seData1(str){
 
 
 const _$Uy = function (_$iU) {
-    var _$ij = _$iU.slice;
-    return _$iU === _$Uo || _$UC(_$Uo, _$iU) && _$ij === _$Uo.slice ? _$UR : _$ij;
+    // var _$ij = _$iU.slice;
+    // return _$iU === _$Uo || _$UC(_$Uo, _$iU) && _$ij === _$Uo.slice ? _$UR : _$ij;
+    return Array.prototype.slice
 }
 
 
@@ -495,11 +496,16 @@ _$iH = {
           _$iP = this.words = _$iP || [], this.sigBytes = _$iK != undefined ? _$iK : 4 * _$iP.length;
         },
     'clone': function () {
-      var _$iP,
-        _$iK = _$iH.clone.call(this);
-      return _$iK.words = _$Uy(_$iP = this.words).call(_$iP, 0), _$iK;
+          return this.init.prototype.extend(this);
         }
 }
+clone = function () {
+      var _$iP,
+        // _$iK = _$iH.clone.call(this);
+        _$iK = this;
+      _$iP = this.words
+      return _$iK.words = _$Uy(_$iP).call(_$iP, 0), _$iK;
+        }
 
 _$iE = {
     'reset': function () {
@@ -713,7 +719,11 @@ _$iM.stringify = function (_$iP) {
 
 }
 
-
+_$Ui = function (_$iU) {
+      // var _$ij = _$iU.concat;
+      // return _$iU === _$UO || _$UM(_$UO, _$iU) && _$ij === _$UO.concat ? _$Uc : _$ij;
+    return Array.prototype.concat
+    }
 
 
 function HMACfinalize(_$iH) {
@@ -726,8 +736,11 @@ function HMACfinalize(_$iH) {
     var _$iO = _$iM.finalize.call(_$iM1,_$iH);
 
     _$iM.reset()
+    _$iu = clone.call(this._oKey)
+    const vv = _$Ui(_$iu).call(_$iu, _$iO)
 
-    return _$iM.finalize(_$Ui(_$iu = _$iH.clone.call(this._oKey)).call(_$iu, _$iO));
+    // TODO: 算到此处了
+    return _$iM.finalize(vv);
 }
 function initHash(){
     this._data = _append(this._iKey)
@@ -809,5 +822,5 @@ function SHA256CUS(_$iK, _$iB) {
 
 
 const aa = SHA256CUS("appid:appid&functionid:functionId"
-    ,"bebebabef244af3068b7fcbe0514cbd93263b0083f4f79b95cbf22461931c2ef")
+    ,"b2dc6c50aa7d307d55e6c358565f778d1f173ea384a02a50a92f6ea66bcd877c")
 console.log(aa)
