@@ -1,4 +1,3 @@
-
 var _$Q = [
     "r2vUzxjHDg9YrNvUy3rPB24",
     "zw50CMLLCW",
@@ -386,35 +385,36 @@ var _$Q = [
 
 function a092750F() {
     return codeSheetFunc(439);
-  }
+}
+
 a092750F()
 
 function codeSheetFunc(_$U, _$j) {
-      _$U = _$U - 318;
-      var _$r = _$Q[_$U];
-      if (a092750F.sFnleK === undefined) {
+    _$U = _$U - 318;
+    var _$r = _$Q[_$U];
+    if (a092750F.sFnleK === undefined) {
         var _$x = function (_$L) {
-          var _$W = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
-          var _$V = '',
-            _$H = '';
-          for (var _$u = 0, _$M, _$c, _$O = 0; _$c = _$L.charAt(_$O++); ~_$c && (_$M = _$u % 4 ? _$M * 64 + _$c : _$c, _$u++ % 4) ? _$V += String.fromCharCode(255 & _$M >> (-2 * _$u & 6)) : 0) {
-            _$c = _$W.indexOf(_$c);
-          }
-          for (var _$i = 0, _$E = _$V.length; _$i < _$E; _$i++) {
-            _$H += '%' + ('00' + _$V.charCodeAt(_$i).toString(16)).slice(-2);
-          }
-          return decodeURIComponent(_$H);
+            var _$W = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
+            var _$V = '',
+                _$H = '';
+            for (var _$u = 0, _$M, _$c, _$O = 0; _$c = _$L.charAt(_$O++); ~_$c && (_$M = _$u % 4 ? _$M * 64 + _$c : _$c, _$u++ % 4) ? _$V += String.fromCharCode(255 & _$M >> (-2 * _$u & 6)) : 0) {
+                _$c = _$W.indexOf(_$c);
+            }
+            for (var _$i = 0, _$E = _$V.length; _$i < _$E; _$i++) {
+                _$H += '%' + ('00' + _$V.charCodeAt(_$i).toString(16)).slice(-2);
+            }
+            return decodeURIComponent(_$H);
         };
         a092750F.ZRuobe = _$x, _$b = arguments, a092750F.sFnleK = !![];
-      }
-      var _$X = _$Q[0].substring(0, 2),
+    }
+    var _$X = _$Q[0].substring(0, 2),
         _$T = _$U + _$X,
         _$D = _$b[_$T];
-      return !_$D ? (_$r = a092750F.ZRuobe(_$r), _$b[_$T] = _$r) : _$r = _$D, _$r;
-    }
+    return !_$D ? (_$r = a092750F.ZRuobe(_$r), _$b[_$T] = _$r) : _$r = _$D, _$r;
+}
 
 
-function _seData1(str){
+function _seData1(str) {
     const codeSheet1 = "QPONMLKJIHGFEDCBA-_9876543210zyxwvutsrqponmlkjihgfedcbaZYXWVUTSR";  // 码表1取自一个函数，应该是定值
     const str_len = str.length;
     const nums = Math.floor(str_len / 13);  // 13由索引取自大数组中的几个值，然后运算，应该是定值
@@ -423,43 +423,42 @@ function _seData1(str){
     let newStr = ""
     let codeCount = 0;
     let startIndex;
-    for (let i = 0;i < str_len;i++) {
+    for (let i = 0; i < str_len; i++) {
         let charCode = str.charCodeAt(i);
-            codeCount += charCode;
+        codeCount += charCode;
 
         // 判断是否是目标字符
-        const isNeedChar = (i+1) % nums === 0  && newStr.length+1 < 13;
+        const isNeedChar = (i + 1) % nums === 0 && newStr.length + 1 < 13;
 
         if (isNeedChar) {
             const num = codeCount * 14 % sheetLen;  // 14 与 13同理，64 是码表1的长度
             // console.log(codeSheet1[num],"======",codeCount)
 
             newStr += codeSheet1[num];
-             codeCount = 0;
+            codeCount = 0;
         }
-        if (newStr.length+1 === 13){
-            if (!startIndex){
+        if (newStr.length + 1 === 13) {
+            if (!startIndex) {
                 startIndex = i
             }
 
-           // 达到偏移量，输出最后一位
+            // 达到偏移量，输出最后一位
             const offset = nums + (str.length % 13);
-            if (i - startIndex === offset){
+            if (i - startIndex === offset) {
 
-                 const num = codeCount * 14 % sheetLen;  // 14 与 13同理，64 是码表1的长度
+                const num = codeCount * 14 % sheetLen;  // 14 与 13同理，64 是码表1的长度
                 // console.log(codeSheet1[num],"======",codeCount)
 
                 newStr += codeSheet1[num];
-                 codeCount = 0;
+                codeCount = 0;
             }
         }
     }
 
     // console.log(newStr)
-    return str+newStr
+    return str + newStr
 
 }
-
 
 
 const _$Uy = function (_$iU) {
@@ -469,7 +468,7 @@ const _$Uy = function (_$iU) {
 }
 
 
-_$iu  = {
+_$iu = {
     'init': function (_$iP, _$iK) {
         _$iP = this.words = _$iP || [], this.sigBytes = _$iK != _$ix ? _$iK : 4 * _$iP.length;
     },
@@ -493,90 +492,98 @@ _$iu  = {
 
 _$iH = {
     'init': function (_$iP, _$iK) {
-          _$iP = this.words = _$iP || [], this.sigBytes = _$iK != undefined ? _$iK : 4 * _$iP.length;
-        },
+        _$iP = this.words = _$iP || [], this.sigBytes = _$iK != undefined ? _$iK : 4 * _$iP.length;
+    },
     'clone': function () {
-          return this.init.prototype.extend(this);
-        }
+        return this.init.prototype.extend(this);
+    }
 }
 clone = function () {
-      var _$iP,
+    var _$iP,
         // _$iK = _$iH.clone.call(this);
         _$iK = this;
-      _$iP = this.words
-      return _$iK.words = _$Uy(_$iP).call(_$iP, 0), _$iK;
-        }
+    _$iP = this.words
+    return _$iK.words = _$Uy(_$iP).call(_$iP, 0), _$iK;
+}
 
 _$iE = {
     'reset': function () {
-          this._data = {
-              words:[],
-              sigBytes:0
-          }, this._nDataBytes = 0;
-        },
+        this._data = {
+            words: [],
+            sigBytes: 0
+        };
+        this._nDataBytes = 0;
+    },
     "_doReset": function () {
         this._hash = new _$iH.init(Array.prototype.slice.call(_$ic, 0))
     }
 }
 _$iO = {
     'parse': function (_$iP) {
-          for (var _$iK = _$iP.length, _$iB = [], _$id = 0; _$id < _$iK; _$id++) _$iB[_$id >>> 2] |= (255 & _$iP.charCodeAt(_$id)) << 24 - (_$id % 4) * 8;
-          return {
-              sigBytes: _$iK,
-              words: _$iB,
-          };
-        }
+        for (var _$iK = _$iP.length, _$iB = [], _$id = 0; _$id < _$iK; _$id++) _$iB[_$id >>> 2] |= (255 & _$iP.charCodeAt(_$id)) << 24 - (_$id % 4) * 8;
+        return {
+            sigBytes: _$iK,
+            words: _$iB,
+        };
+    }
 }
 
 
-_$ii= {
-    parse : function (_$iP) {
-          return _$iO.parse(unescape(encodeURIComponent(_$iP)));
-        },
+_$ii = {
+    parse: function (_$iP) {
+        return _$iO.parse(unescape(encodeURIComponent(_$iP)));
+    },
     _doFinalize: function () {
-              var _$im = this._data,
-                _$iN = _$im.words,
-                _$iP = 8 * this._nDataBytes,
-                _$iK = 8 * _$im.sigBytes;
-              return _$iN[_$iK >>> 5] |= 128 << 24 - _$iK % 32, _$iN[14 + (_$iK + 64 >>> 9 << 4)] = Math.floor(_$iP / 4294967296), _$iN[15 + (_$iK + 64 >>> 9 << 4)] = _$iP, _$im.sigBytes = 4 * _$iN.length, this._process(), this._hash;
-            }
+        var _$im = this._data,
+            _$iN = _$im.words,
+            _$iP = 8 * this._nDataBytes,
+            _$iK = 8 * _$im.sigBytes;
+        return _$iN[_$iK >>> 5] |= 128 << 24 - _$iK % 32, _$iN[14 + (_$iK + 64 >>> 9 << 4)] = Math.floor(_$iP / 4294967296), _$iN[15 + (_$iK + 64 >>> 9 << 4)] = _$iP, _$im.sigBytes = 4 * _$iN.length, this._process(), this._hash;
+    }
 }
 
 _$ic = []
+
 function _initHash() {
 
-          function _$iN(_$id) {
-            for (var _$ih = Math.sqrt(_$id), _$ip = 2;_$ip <= _$ih; _$ip++){
-                if (!(_$id % _$ip)) return !1;
-            }
-            return !0;
-          }
-          function _$iP(_$id) {
-            return 4294967296 * (_$id - (0 | _$id)) | 0;
-          }
-          for (var _$iK = 2, _$iB = 0; _$iB < 64;) {
+    function _$iN(_$id) {
+        for (var _$ih = Math.sqrt(_$id), _$ip = 2; _$ip <= _$ih; _$ip++) {
+            if (!(_$id % _$ip)) return !1;
+        }
+        return !0;
+    }
 
-              if (_$iN(_$iK)){
-                  if (_$iB < 8) {
-                     _$ic[_$iB] = _$iP(Math.pow(_$iK, 0.5))
-                  }
-                  _$iO[_$iB] = _$iP(Math.pow(_$iK, 0.3333333333333333))
-                  _$iB++
-              }
-              _$iK++
-          };
-        };
+    function _$iP(_$id) {
+        return 4294967296 * (_$id - (0 | _$id)) | 0;
+    }
+
+    for (var _$iK = 2, _$iB = 0; _$iB < 64;) {
+
+        if (_$iN(_$iK)) {
+            if (_$iB < 8) {
+                _$ic[_$iB] = _$iP(Math.pow(_$iK, 0.5))
+            }
+            _$iO[_$iB] = _$iP(Math.pow(_$iK, 0.3333333333333333))
+            _$iB++
+        }
+        _$iK++
+    }
+    ;
+};
 // initHash()
 // console.log(_$ic)
 
 
 _append = function (_$iP) {
     var data = ""
-    if (typeof _$iP === "string"){
-        _$iP+="&50c.1"
+    if (typeof _$iP === "string") {
+        _$iP += "&50c.1"
         data = _$ii.parse(_$iP);
-    }else {
-        data = _$iP;
+    } else {
+        // data = _$iP;
+        // const str = _$iM.stringify(_$iP)
+        data = concat.call({words:[],sigBytes:0},_$iP)
+
     }
 
 
@@ -586,107 +593,116 @@ _append = function (_$iP) {
 // _append("appid:appid&functionid:functionIdiysiyEWi66CuCGSQ8Y8oWqG")
 
 
-_$iW={
-    init:function () {
+_$iW = {
+    init: function () {
 
     }
 }
 
 _$iM = {}
 var _$iL = {
-            'WHrfe': function (_$im, _$iN) {
-              return _$im(_$iN);
-            },
-            'cuhzh': function (_$im, _$iN) {
-              return _$iX.Yyhmd(_$im, _$iN);
-            },
-            'eUvBu': function (_$im, _$iN) {
-              return _$im >>> _$iN;
-            },
-            'KOVdp': function (_$im, _$iN) {
-              return _$iX.gCpui(_$im, _$iN);
-            },
-            'vVXWA': function (_$im, _$iN) {
-              return _$im + _$iN;
-            },
-            'HqcXT': function (_$im, _$iN) {
-              return _$im << _$iN;
-            },
-            'DGaHK': function (_$im, _$iN) {
-              return _$im ^ _$iN;
-            },
-            'oiYBo': function (_$im, _$iN) {
-              return _$im | _$iN;
-            },
-            'sTfDx': function (_$im, _$iN) {
-              return _$im << _$iN;
-            },
-            'BpkIk': function (_$im, _$iN) {
-              return _$im ^ _$iN;
-            },
-            'CRvHq': function (_$im, _$iN) {
-              return _$im | _$iN;
-            },
-            'prwtD': function (_$im, _$iN) {
-              return _$im | _$iN;
-            },
-            'emIRf': function (_$im, _$iN) {
-              return _$im + _$iN;
-            },
-            'XnZkb': function (_$im, _$iN) {
-              return _$im >>> _$iN;
-            }
-          }
-_$iM._doProcessBlock = function (_$im, _$iN) {
-  for (var _$iP = this._hash.words, _$iK = _$iP[0], _$iB = _$iP[1], _$id = _$iP[2], _$ih = _$iP[3], _$ip = _$iP[4], _$iz = _$iP[5], _$in = _$iP[6], _$ik = _$iP[7], _$iZ = 0; _$iZ < 64; _$iZ++) {
-    if (_$iZ < 16) _$ii[_$iZ] = 0 | _$im[_$iN + _$iZ];else {
-      var _$iA = _$ii[_$iZ - 15],
-        _$ie = ((_$iA << 25 | (_$iA >>> 7)) ^ (_$iA << 14 | _$iA >>> 18)) ^ _$iA >>> 3,
-        _$is = _$ii[_$iZ - 2],
-        _$ia = (_$is << 15 | _$is >>> 17) ^ ((_$is << 13) | (_$is >>> 19)) ^ _$is >>> 10;
-      _$ii[_$iZ] = (_$ie + _$ii[_$iZ - 7]) + _$ia + _$ii[_$iZ - 16];
+    'WHrfe': function (_$im, _$iN) {
+        return _$im(_$iN);
+    },
+    'cuhzh': function (_$im, _$iN) {
+        return _$iX.Yyhmd(_$im, _$iN);
+    },
+    'eUvBu': function (_$im, _$iN) {
+        return _$im >>> _$iN;
+    },
+    'KOVdp': function (_$im, _$iN) {
+        return _$iX.gCpui(_$im, _$iN);
+    },
+    'vVXWA': function (_$im, _$iN) {
+        return _$im + _$iN;
+    },
+    'HqcXT': function (_$im, _$iN) {
+        return _$im << _$iN;
+    },
+    'DGaHK': function (_$im, _$iN) {
+        return _$im ^ _$iN;
+    },
+    'oiYBo': function (_$im, _$iN) {
+        return _$im | _$iN;
+    },
+    'sTfDx': function (_$im, _$iN) {
+        return _$im << _$iN;
+    },
+    'BpkIk': function (_$im, _$iN) {
+        return _$im ^ _$iN;
+    },
+    'CRvHq': function (_$im, _$iN) {
+        return _$im | _$iN;
+    },
+    'prwtD': function (_$im, _$iN) {
+        return _$im | _$iN;
+    },
+    'emIRf': function (_$im, _$iN) {
+        return _$im + _$iN;
+    },
+    'XnZkb': function (_$im, _$iN) {
+        return _$im >>> _$iN;
     }
-    var _$ig = _$iK & _$iB ^ _$iK & _$id ^ _$iB & _$id,
-      _$iq = ((_$iK << 30) | (_$iK >>> 2)) ^ (_$iK << 19 | _$iK >>> 13) ^ (_$iK << 10 | _$iK >>> 22),
-      _$iJ =_$ik + ((((_$ip << 26) | (_$ip >>> 6)) ^ (_$ip << 21 | (_$ip >>> 11))) ^ ((_$ip << 7) | (_$ip >>> 25))) + ((_$ip & _$iz) ^ (~_$ip & _$in)) + _$iO[_$iZ] + _$ii[_$iZ];
-    _$ik = _$in, _$in = _$iz, _$iz = _$ip, _$ip = _$ih + _$iJ | 0, _$ih = _$id, _$id = _$iB, _$iB = _$iK, _$iK = ((_$iJ + (_$iq + _$ig)) | 0);
-  }
-  _$iP[0] = _$iP[0] + _$iK | 0, _$iP[1] = _$iP[1] + _$iB | 0, _$iP[2] = _$iP[2] + _$id | 0, _$iP[3] = _$iP[3] + _$ih | 0, _$iP[4] = ((_$iP[4] + _$ip) | 0), _$iP[5] = _$iP[5] + _$iz | 0, _$iP[6] = (_$iP[6] + _$in) | 0, _$iP[7] = (_$iP[7]+ _$ik) | 0;
+}
+_$iM._doProcessBlock = function (_$im, _$iN) {
+    for (var _$iP = this._hash.words, _$iK = _$iP[0], _$iB = _$iP[1], _$id = _$iP[2], _$ih = _$iP[3], _$ip = _$iP[4], _$iz = _$iP[5], _$in = _$iP[6], _$ik = _$iP[7], _$iZ = 0; _$iZ < 64; _$iZ++) {
+        if (_$iZ < 16) {
+            _$ii[_$iZ] = 0 | _$im[_$iN + _$iZ];
+        } else {
+            var _$iA = _$ii[_$iZ - 15],
+                _$ie = ((_$iA << 25 | (_$iA >>> 7)) ^ (_$iA << 14 | _$iA >>> 18)) ^ _$iA >>> 3,
+                _$is = _$ii[_$iZ - 2],
+                _$ia = (_$is << 15 | _$is >>> 17) ^ ((_$is << 13) | (_$is >>> 19)) ^ _$is >>> 10;
+            _$ii[_$iZ] = (_$ie + _$ii[_$iZ - 7]) + _$ia + _$ii[_$iZ - 16];
+        }
+        var _$ig = _$iK & _$iB ^ _$iK & _$id ^ _$iB & _$id,
+            _$iq = ((_$iK << 30) | (_$iK >>> 2)) ^ (_$iK << 19 | _$iK >>> 13) ^ (_$iK << 10 | _$iK >>> 22),
+            _$iJ = _$ik + ((((_$ip << 26) | (_$ip >>> 6)) ^ (_$ip << 21 | (_$ip >>> 11))) ^ ((_$ip << 7) | (_$ip >>> 25))) + ((_$ip & _$iz) ^ (~_$ip & _$in)) + _$iO[_$iZ] + _$ii[_$iZ];
+        _$ik = _$in, _$in = _$iz, _$iz = _$ip, _$ip = _$ih + _$iJ | 0, _$ih = _$id, _$id = _$iB, _$iB = _$iK, _$iK = ((_$iJ + (_$iq + _$ig)) | 0);
+    }
+    _$iP[0] = _$iP[0] + _$iK | 0, _$iP[1] = _$iP[1] + _$iB | 0, _$iP[2] = _$iP[2] + _$id | 0, _$iP[3] = _$iP[3] + _$ih | 0, _$iP[4] = ((_$iP[4] + _$ip) | 0), _$iP[5] = _$iP[5] + _$iz | 0, _$iP[6] = (_$iP[6] + _$in) | 0, _$iP[7] = (_$iP[7] + _$ik) | 0;
 }
 
 _$iM._process = function (_$iP) {
-  var _$iK,
-    _$iB = this._data,
-    _$id = _$iB.words,
-    _$ih = _$iB.sigBytes,
-    _$ip = this.blockSize,
-    _$iz = _$ih / (4 * _$ip),
-    _$in = (_$iz = _$iP ? Math.ceil(_$iz) : Math.max((0 | _$iz) - this._minBufferSize, 0)) * _$ip,
-    _$ik = Math.min(4 * _$in, _$ih);
-  if (_$in) {
-    for (var _$iZ = 0; _$iZ < _$in; _$iZ += _$ip) _$iM._doProcessBlock.call(this, _$id, _$iZ);
-    _$iK = Array.prototype.splice.call(_$id, 0, _$in), _$iB.sigBytes -= _$ik;
-  }
-  return {
-      sigBytes: _$ik,
-      words: _$iK,
-  };
+    var _$iK,
+        _$iB = this._data,
+        _$id = _$iB.words,
+        _$ih = _$iB.sigBytes,
+        _$ip = this.blockSize,
+        _$iz = _$ih / (4 * _$ip),
+        _$in = (_$iz = _$iP ? Math.ceil(_$iz) : Math.max((0 | _$iz) - this._minBufferSize, 0)) * _$ip,
+        _$ik = Math.min(4 * _$in, _$ih);
+    if (_$in) {
+        for (var _$iZ = 0; _$iZ < _$in; _$iZ += _$ip) _$iM._doProcessBlock.call(this, _$id, _$iZ);
+        _$iK = Array.prototype.splice.call(_$id, 0, _$in), _$iB.sigBytes -= _$ik;
+    }
+    return {
+        sigBytes: _$ik,
+        words: _$iK,
+    };
 }
 
 
-_$iM._doFinalize = function (){
-  var _$im = this._data,
-    _$iN = _$im.words,
-    _$iP = 8 * this._nDataBytes,
-    _$iK = 8 * _$im.sigBytes;
-  return _$iN[_$iK >>> 5] |= 128 << 24 - _$iK % 32, _$iN[14 + (_$iK + 64 >>> 9 << 4)] = Math.floor(_$iP / 4294967296), _$iN[15 + (_$iK + 64 >>> 9 << 4)] = _$iP, _$im.sigBytes = 4 * _$iN.length, _$iM._process.call(this), this._hash;
+_$iM._doFinalize = function () {
+    var _$im = this._data,
+        _$iN = _$im.words,
+        _$iP = 8 * this._nDataBytes,
+        _$iK = 8 * _$im.sigBytes;
+    _$iN[_$iK >>> 5] |= 128 << 24 - _$iK % 32;
+    _$iN[14 + (_$iK + 64 >>> 9 << 4)] = Math.floor(_$iP / 4294967296);
+    _$iN[15 + (_$iK + 64 >>> 9 << 4)] = _$iP;
+    _$im.sigBytes = 4 * _$iN.length, _$iM._process.call(this);
+
+    return this._hash;
 }
 
 
 // 是一个魔改的sha256算法
-_$iM.finalize =  function (_$iP) {
+_$iM.finalize = function (_$iP) {
+
 
     _$iP = _seData1(_$iP)
+
     this._data = _append(_$iP)
     this._nDataBytes = 64 + this._data.sigBytes
     return _$iM._doFinalize.call(this);
@@ -701,14 +717,14 @@ _$iM.stringify = function (_$iP) {
 
     }
     _$iK = Array.from(_$iK);
-    const smallArr = _$iK.splice(0,6).reverse()
+    const smallArr = _$iK.splice(0, 6).reverse()
     _$iK = smallArr.concat(_$iK)
     let ciphertext = ""
 
-    for (const num  of _$iK){
+    for (const num of _$iK) {
         let s = num.toString(16)
-        if (s.length<2){
-            s = "0"+s
+        if (s.length < 2) {
+            s = "0" + s
         }
 
         ciphertext = ciphertext + s
@@ -720,29 +736,65 @@ _$iM.stringify = function (_$iP) {
 }
 
 _$Ui = function (_$iU) {
-      // var _$ij = _$iU.concat;
-      // return _$iU === _$UO || _$UM(_$UO, _$iU) && _$ij === _$UO.concat ? _$Uc : _$ij;
-    return Array.prototype.concat
+    // var _$ij = _$iU.concat;
+    // return _$iU === _$UO || _$UM(_$UO, _$iU) && _$ij === _$UO.concat ? _$Uc : _$ij;
+    return concat
+}
+finalize = function (_$iP) {
+    if (_$iP) {
+        if ("string" == typeof _$iP) {
+            _$iP = _seData1.call(this, _$iP)
+
+        }
+    }
+    this._data = _append(_$iP)
+    this._nDataBytes += this._data.sigBytes
+
+    return _$iM._doFinalize.call(this);
+
+}
+
+function concat(_$iP) {
+    var _$iK = this.words,
+        _$iB = _$iP.words,
+        _$id = this.sigBytes,
+        _$ih = _$iP.sigBytes;
+    clamp.call(this);
+    if (_$id % 4) {
+        for (var _$ip = 0; _$ip < _$ih; _$ip++) {
+            var _$iz = _$iB[_$ip >>> 2] >>> 24 - _$iX.uSSvn(_$ip, 4) * 8 & 255;
+            _$iK[_$id + _$ip >>> 2] |= _$iz << _$iX.YUjxJ(24, _$iX.uSSvn(_$id + _$ip, 4) * 8);
+        }
+    } else {
+        for (_$ip = 0; _$ip < _$ih; _$ip += 4) _$iK[_$id + _$ip >>> 2] = _$iB[_$ip >>> 2];
+    }
+    return this.sigBytes += _$ih, this;
+}
+function clamp() {
+      var _$iP = this.words,
+        _$iK = this.sigBytes;
+      _$iP[_$iK >>> 2] &= 4294967295 << 32 - _$iK % 4 * 8, _$iP.length = Math.ceil(_$iK / 4);
     }
 
 
 function HMACfinalize(_$iH) {
     var _$iu = undefined,
-    _$iM1 = this._hasher;
+        _$iM1 = this._hasher;
     if ("string" == typeof _$iH) {
         var _$ic = _seData1(_$iH);
         _$iH = _$ic.substring(0, _$ic.length - 3);
     }
-    var _$iO = _$iM.finalize.call(_$iM1,_$iH);
+    var _$iO = finalize.call(_$iM1, _$iH);
 
-    _$iM.reset()
+    _$iM.reset.call(_$iM1)
     _$iu = clone.call(this._oKey)
     const vv = _$Ui(_$iu).call(_$iu, _$iO)
 
     // TODO: 算到此处了
-    return _$iM.finalize(vv);
+    return finalize.call(_$iM1, vv);
 }
-function initHash(){
+
+function initHash() {
     this._data = _append(this._iKey)
     _$iM._process.call(this)
     return this
@@ -752,9 +804,9 @@ function initHash(){
 function SHA256CUS(_$iK, _$iB) {
 
 
-    const smallChars = _$iB.slice(0,15).split('').reverse()
+    const smallChars = _$iB.slice(0, 15).split('').reverse()
     const newSmallChars = []
-    for (const it of smallChars){
+    for (const it of smallChars) {
         const charCode = it.charCodeAt()
         const newCharCode = (7 * (charCode - 32) + 97) % 95 + 32
         const newChar = String.fromCharCode(newCharCode)
@@ -780,21 +832,20 @@ function SHA256CUS(_$iK, _$iB) {
     }
 
 
-
     _initHash()
-    _$iM._hasher={
+    _$iM._hasher = {
         _hash: {
-            words:_$ic,
+            words: _$ic.slice(),
             sigBytes: new Uint32Array(_$ic).byteLength,
         },
-        _data:{
-            words:[],
+        _data: {
+            words: [],
             sigBytes: 0,
 
         },
         blockSize: 16,
         _minBufferSize: 0,
-        _nDataBytes:0
+        _nDataBytes: 64
     }
 
     _$iM._iKey = array_iKey
@@ -809,10 +860,8 @@ function SHA256CUS(_$iK, _$iB) {
     // console.log(_$iM)
 
     // const _$iM1 = initHash()
-    return HMACfinalize.call(_$iM,_$iK);
+    return HMACfinalize.call(_$iM, _$iK);
 };
-
-
 
 
 // new _$im.HMAC.init(_$iP, _$iB)  初始化一个HMAC加密对象
@@ -822,5 +871,5 @@ function SHA256CUS(_$iK, _$iB) {
 
 
 const aa = SHA256CUS("appid:appid&functionid:functionId"
-    ,"b2dc6c50aa7d307d55e6c358565f778d1f173ea384a02a50a92f6ea66bcd877c")
+    , "7b1240ec96bd83f12479ac37ad62c00628e85030164c8a24245d34301b004aab")
 console.log(aa)
